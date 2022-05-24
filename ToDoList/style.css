@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1{
+    margin-top: 4rem;
+    text-align: center;
+    font-weight: 900;
+    font-size: 2rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #393E46;
+    
+    
+}
+
+form{
+    justify-content: center;
+    display:flex;
+    min-height: 20vh;
+    align-items: center;
+    
+    
+}
+body{
+    background-color: #F9ED69;
+}
+form input, form button{
+padding: 0.5rem;
+font-size: small;
+background: white;
+
+border:none;
+border-radius: 2rem;
+font-weight: 700;
+font-size: 1.5rem;
+}
+form button{
+    margin-left: 12rem;
+    background: none;
+   position:absolute;
+    cursor: pointer;
+    color: #00aa77;
+    
+}
+form button:hover{
+    color: #006748;
+}
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.todo-list{
+    min-width: 30%;
+    list-style: none;
+}
+.todo{
+    margin: 0.5rem;
+    background: white;
+    color:#243D25;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    box-shadow: 0px 1px 3px rgba(198, 198, 198);
+    transition: all 1s ease;
+}
+.todo li{
+flex: 1;
+margin-left: 1rem;
+
+
+
+}
+.deleted-btn, .complete-btn{
+padding: 1rem;
+background: white;
+border:none;
+border-radius: 1rem;
+cursor: pointer;
+
+}
+.deleted-btn:hover{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background: #EF6D6D;
+    opacity: 90%;
+    color: white;
+    box-shadow: 0px 1px 5px grey;
+}
+.complete-btn:hover {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 0px 1px 4px grey;
+    background: #65C18C;
+    opacity: 90%;
+    color: white;
+}
+
+.fa-trash, .fa-circle-check{
+    pointer-events:none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+    
+}
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline:none;
+    border:none;
+    border-radius: 2rem;
+
+}
+select{
+    
+    width:10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+.select{
+    margin:1rem;
+    position:relative;
+    overflow: hiden;
+    padding: 1rem;
+}
+.select::after{
+content: "\25BC";
+position: absolute;
+color: #393E46;
+
+top:0;
+right: 0;
+padding:1rem;
+pointer-events: none;
+}
+
