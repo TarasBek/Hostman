@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -13,18 +13,38 @@
 </head>
 
 <body>
+    <script>
+        function display_c() {
+            var refresh = 1000;
+            mytime = setTimeout('display_ct()', refresh)
+        }
+
+        function display_ct() {
+            var date = new Date()
+            var fullDate = date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear();
+            fullDate = fullDate + " - " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+
+
+            document.getElementById("todotime").innerHTML = fullDate
+            display_c();
+        }
+
+    </script>
 
     <header>
         <h1>Wath`s to do</h1>
-        <h1>test</h1>
-        
     </header>
+
+    <h4 id="todotime">
+        <button class="bouncy" type="button" onclick=" display_ct()">See time</button>
+    </h4>
+
     <form>
         <input type="text" class="todo-input">
         <button class="todo-button" type="submit">
             <i class="fas fa-plus-square"></i>
         </button>
-        <select name="todos"  class="filter-todo">
+        <select name="todos" class="filter-todo">
             <option value="all">All</option>
             <option value="completed">Completed</option>
             <option value="uncompleted">Uncompleted</option>
